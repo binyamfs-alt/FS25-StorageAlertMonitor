@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GUIProfiles>
+    <Profile name="samContainer" extends="fs25_menuContainer" with="anchorMiddleLeft">
+        <position value="134px -0.03"/>
+        <size value="1594px 0.70"/>
+    </Profile>
+    <Profile name="samText" extends="baseReference" with="anchorBottomLeft">
+        <textSize value="17px"/>
+        <textColor value="$preset_fs25_colorMainLight"/>
+        <textAlignment value="left"/>
+        <textVerticalAlignment value="center"/>
+    </Profile>
+    <Profile name="samHeading" extends="samText">
+        <textSize value="22px"/>
+        <textBold value="true"/>
+    </Profile>
+    <Profile name="samColumn" extends="samText">
+        <textSize value="15px"/>
+        <textBold value="true"/>
+    </Profile>
+    <Profile name="samRow" extends="baseReference" with="anchorTopStretchingX alternating">
+        <height value="32px"/>
+        <imageColor value="$preset_fs25_colorGrey"/>
+        <imageSelectedColor value="$preset_fs25_colorMainHighlight"/>
+        <alternateBackgroundColor value="$preset_fs25_colorGreyDark_50"/>
+    </Profile>
+    <Profile name="samCell" extends="samText">
+        <textSize value="15px"/>
+        <textSelectedColor value="$preset_fs25_colorMainDark"/>
+        <textDisabledColor value="$preset_colorDisabled"/>
+    </Profile>
+    <Profile name="samNumber" extends="samCell">
+        <textAlignment value="right"/>
+    </Profile>
+    <Profile name="samButton" extends="buttonBase" with="anchorBottomLeft">
+        <size value="180px 38px"/>
+        <textSize value="17px"/>
+        <textColor value="1 1 1 1"/>
+        <textFocusedColor value="1 1 1 1"/>
+        <textHighlightedColor value="1 1 1 1"/>
+        <handleFocus value="true"/>
+        <textBold value="true"/>
+        <textSelectedColor value="1 1 1 1"/>
+        <textPressedColor value="1 1 1 1"/>
+        <textDisabledColor value="1 1 1 1"/>
+        <imageColor value="0 0 0 1"/>
+        <imageFocusedColor value="0 0 0 1"/>
+        <imageHighlightedColor value="0 0 0 1"/>
+        <imageSelectedColor value="0 0 0 1"/>
+        <imagePressedColor value="0 0 0 1"/>
+        <imageDisabledColor value="0 0 0 1"/>
+        <imageSliceId value="gui.rectangle_center"/>
+        <textAlignment value="center"/>
+        <imageFocusedSliceId value="gui.rectangle_center"/>
+        <imageHighlightedSliceId value="gui.rectangle_center"/>
+        <imageSelectedSliceId value="gui.rectangle_center"/>
+        <imagePressedSliceId value="gui.rectangle_center"/>
+        <imageDisabledSliceId value="gui.rectangle_center"/>
+    </Profile>
+    <Profile name="samArrow" extends="samButton">
+        <size value="44px 38px"/>
+        <textSize value="24px"/>
+    </Profile>
+    <Profile name="samSmall" extends="samText">
+        <textSize value="13px"/>
+    </Profile>
+    <Profile name="samButtonFrame" extends="baseReference" with="anchorBottomLeft">
+        <imageSliceId value="gui.rectangle_center"/>
+        <imageColor value="0.38 0.38 0.38 1"/>
+    </Profile>
+    <Profile name="samBevelTop" extends="samButtonFrame">
+        <imageColor value="0.55 0.55 0.55 1"/>
+    </Profile>
+    <Profile name="samBevelLeft" extends="samButtonFrame">
+        <imageColor value="0.40 0.40 0.40 1"/>
+    </Profile>
+    <Profile name="samBevelBottom" extends="samButtonFrame">
+        <imageColor value="0.12 0.12 0.12 1"/>
+    </Profile>
+    <Profile name="samBevelRight" extends="samButtonFrame">
+        <imageColor value="0.20 0.20 0.20 1"/>
+    </Profile>
+    <Profile name="samButtonShadow" extends="samButtonFrame">
+        <imageColor value="0 0 0 0.65"/>
+    </Profile>
+    <Profile name="samAlertHeading" extends="samHeading" with="anchorBottomLeft">
+        <textAlignment value="center"/>
+        <textSize value="19px"/>
+    </Profile>
+    <Profile name="samRowsReadout" extends="samText" with="anchorBottomLeft">
+        <textAlignment value="center"/>
+        <textBold value="true"/>
+    </Profile>
+    <Profile name="samDivider" extends="baseReference" with="anchorBottomLeft">
+        <imageColor value="$preset_fs25_colorMainHighlight"/>
+    </Profile>
+</GUIProfiles>

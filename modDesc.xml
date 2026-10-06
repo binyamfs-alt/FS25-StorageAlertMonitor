@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modDesc descVersion="113">
+    <author>BinyamFS</author>
+    <version>1.0.1.2</version>
+    <title>
+        <en>Storage Alert Monitor</en>
+    </title>
+    <description>
+        <en><![CDATA[Monitor selected products in productions, storages and husbandries with individual low or high percentage alerts. The movable HUD displays product icons, localized names, building names and current percentages. Independent of Distribution Redux.
+
+Default mouse / HUD move control: Left Ctrl+Left Alt+S. Press to enable the cursor and HUD move mode, drag the title bar, then press again or click outside the HUD to finish. Restores the previous cursor state. Works on foot and in vehicles; reassign it in Controls under Storage Alerts: Toggle mouse / move HUD.
+
+Changelog 1.0.1.2:
+- Suspend mouse camera movement while the cursor is visible, on foot and in vehicles.
+
+Changelog 1.0.1.1:
+- Add a configurable mouse-cursor control so the HUD can be moved without another mod.
+- Restore the previous cursor state when leaving move mode or unloading.
+
+Changelog 1.0.0.14:
+- Corrected texture formats, icon mipmaps and mod description metadata.
+- Removed protected Lua calls so errors reach the game log directly.
+- Custom production and pallet storage facilities are listed separately.
+- Vehicle and walking HUD choices persist during the session and reset on load.
+]]></en>
+        <de><![CDATA[Überwache ausgewählte Produkte in Produktionen, Lagern und Tierställen mit individuellen Warnungen für niedrige oder hohe Füllstände. Das verschiebbare HUD zeigt Produktsymbole, lokalisierte Namen, Gebäudenamen und aktuelle Prozentwerte. Unabhängig von Distribution Redux.
+
+Standard-Maussteuerung / HUD-Verschiebung: Linke Strg+Linke Alt+S. Zum Aktivieren des Mauszeigers und Verschiebemodus drücken, die Titelleiste ziehen und erneut drücken oder außerhalb des HUD klicken, um den Modus zu beenden. Der vorherige Mauszeigerzustand wird wiederhergestellt. Zu Fuß und in Fahrzeugen verfügbar; in der Spielsteuerung unter Lagerwarnungen: Maus / HUD verschieben neu belegbar.
+
+Änderungen 1.0.1.2:
+- Maus-Kamerabewegung bei sichtbarem Mauszeiger zu Fuß und in Fahrzeugen unterbrechen.
+
+Änderungen 1.0.1.1:
+- Belegbare Mauszeiger-Steuerung zum Verschieben des HUD ohne weitere Mods.
+
+Änderungen 1.0.0.14:
+- Texturformate und Modbeschreibung korrigiert.
+- Protokollierung fehlgeschlagener Lagerabfragen ergänzt.
+- Benutzerdefinierte Produktionen und Palettenlager werden getrennt angezeigt.
+- HUD-Einstellungen für Fahrzeuge und zu Fuß gelten innerhalb einer Sitzung und werden beim Laden zurückgesetzt.
+]]></de>
+    </description>
+    <iconFilename>icon_StorageAlertMonitor.dds</iconFilename>
+    <multiplayer supported="true"/>
+    <l10n>
+        <text name="input_SAM_MOUSE_TOGGLE">
+            <en>Storage Alerts: Toggle mouse / move HUD</en>
+            <de>Lagerwarnungen: Maus / HUD verschieben</de>
+        </text>
+        <text name="input_SAM_TOGGLE_HUD">
+            <en>Storage Alerts: Toggle HUD</en>
+        </text>
+        <text name="input_SAM_MORE_ROWS">
+            <en>Storage Alerts: More HUD rows</en>
+        </text>
+        <text name="input_SAM_FEWER_ROWS">
+            <en>Storage Alerts: Fewer HUD rows</en>
+        </text>
+    </l10n>
+    <actions>
+        <action name="SAM_MOUSE_TOGGLE" category="ONFOOT VEHICLE"/>
+        <action name="SAM_TOGGLE_HUD" category="BASE"/>
+        <action name="SAM_MORE_ROWS" category="BASE"/>
+        <action name="SAM_FEWER_ROWS" category="BASE"/>
+    </actions>
+    <inputBinding>
+        <actionBinding action="SAM_MOUSE_TOGGLE">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lctrl KEY_lalt KEY_s" axisComponent="+" neutralInput="0" index="1"/>
+        </actionBinding>
+    </inputBinding>
+    <extraSourceFiles>
+        <sourceFile filename="main.lua"/>
+    </extraSourceFiles>
+</modDesc>

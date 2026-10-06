@@ -1,26 +1,22 @@
-# FS25 Storage Alert Monitor
+# Storage Alert Monitor 1.0.1.2
 
-**Storage Alert Monitor (SAM)** is a Farming Simulator 25 utility mod by **BinyamFS Modding** that monitors configured storage locations and provides capacity alerts.
+## Mouse control
 
-## Features
+Press **Left Ctrl+Left Alt+S** or reassign **Storage Alerts: Toggle mouse / move HUD** in Controls. The default was checked against this player's saved bindings. Press it on foot or in a vehicle to enable the cursor and HUD move mode. Drag the title bar, then press it again or click outside the HUD to finish. The previous cursor state is restored. It works on foot and in vehicles without another cursor mod. The existing menu Move HUD button continues to work.
 
-- Monitors supported storage capacities
-- Provides threshold-based alerts
-- Helps prevent overfilling and missed capacity problems
-- Designed as a lightweight quality-of-life utility
+Mouse camera movement pauses while the cursor is visible, on foot and in vehicles. Keyboard and controller camera input remain available. Hiding the cursor immediately restores mouse look.
 
-## Status
+## Changelog
 
-Active development and testing.
+### 1.0.1.2
 
-## Installation
+- Pause mouse camera movement while using the HUD cursor.
 
-Release packages will be provided in the **Releases** section of this repository.
+### 1.0.1.1
 
-## Distribution
+- Added an assignable mouse control so HUD movement works without another mod.
+- Repeated requests to enter move mode preserve the original cursor state.
 
-This mod is intended for free distribution in accordance with GIANTS Software requirements. Do not place this mod behind a paywall or redistribute modified copies as official BinyamFS Modding releases.
+### 1.0.1.0
 
-## Author
-
-BinyamFS Modding
+- Standardized Lua/XML formatting and metadata.
