@@ -6,7 +6,7 @@
         <en>Storage Alert Monitor</en>
     </title>
     <description>
-        <en><![CDATA[Monitor selected products in productions, storages and husbandries with individual low or high percentage alerts. The movable HUD displays product icons, localized names, building names and current percentages. Independent of Distribution Redux.
+        <en><![CDATA[Monitor selected products in productions, storages and husbandries with individual low or high percentage alerts. The movable HUD displays product icons, localized names, building names and current percentages.
 
 Default mouse / HUD move control: Left Ctrl+Left Alt+S. Press to enable the cursor and HUD move mode, drag the title bar, then press again or click outside the HUD to finish. Restores the previous cursor state. Works on foot and in vehicles; reassign it in Controls under Storage Alerts: Toggle mouse / move HUD.
 
@@ -23,7 +23,7 @@ Changelog 1.0.0.14:
 - Custom production and pallet storage facilities are listed separately.
 - Vehicle and walking HUD choices persist during the session and reset on load.
 ]]></en>
-        <de><![CDATA[Überwache ausgewählte Produkte in Produktionen, Lagern und Tierställen mit individuellen Warnungen für niedrige oder hohe Füllstände. Das verschiebbare HUD zeigt Produktsymbole, lokalisierte Namen, Gebäudenamen und aktuelle Prozentwerte. Unabhängig von Distribution Redux.
+        <de><![CDATA[Überwache ausgewählte Produkte in Produktionen, Lagern und Tierställen mit individuellen Warnungen für niedrige oder hohe Füllstände. Das verschiebbare HUD zeigt Produktsymbole, lokalisierte Namen, Gebäudenamen und aktuelle Prozentwerte.
 
 Standard-Maussteuerung / HUD-Verschiebung: Linke Strg+Linke Alt+S. Zum Aktivieren des Mauszeigers und Verschiebemodus drücken, die Titelleiste ziehen und erneut drücken oder außerhalb des HUD klicken, um den Modus zu beenden. Der vorherige Mauszeigerzustand wird wiederhergestellt. Zu Fuß und in Fahrzeugen verfügbar; in der Spielsteuerung unter Lagerwarnungen: Maus / HUD verschieben neu belegbar.
 
