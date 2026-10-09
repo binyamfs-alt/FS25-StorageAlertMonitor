@@ -1,4 +1,4 @@
-# Storage Alert Monitor 1.0.1.2
+# Storage Alert Monitor 1.0.1.3
 
 ## Build
 
@@ -15,6 +15,11 @@ Press **Left Ctrl+Left Alt+S** or reassign **Storage Alerts: Toggle mouse / move
 Mouse camera movement pauses while the cursor is visible, on foot and in vehicles. Keyboard and controller camera input remain available. Hiding the cursor immediately restores mouse look.
 
 ## Changelog
+
+### 1.0.1.3
+
+- Localize menu, HUD, building categories, animal metrics and all controls in English and German.
+- Keep saved building and product keys unchanged.
 
 ### 1.0.1.2
 

@@ -5,10 +5,10 @@
             <Bitmap profile="fs25_menuHeaderIconBg">
                 <Bitmap profile="fs25_menuHeaderIcon" id="monitorHeaderIcon" imageColor="0 0 0 1"/>
             </Bitmap>
-            <Text profile="fs25_menuHeaderTitle" text="Storage Alert Monitor"/>
+            <Text profile="fs25_menuHeaderTitle" id="label_pageTitle" text=""/>
         </GuiElement>
         <ThreePartBitmap profile="fs25_lineSeparatorTopHighlighted" size="1594px 0.003"/>
-        <Text profile="samHeading" text="Buildings" position="12px 690px" size="440px 28px"/>
+        <Text profile="samHeading" id="label_buildings" text="" position="12px 690px" size="440px 28px"/>
         <Text profile="samHeading" id="buildingTitle" text="" position="480px 690px" size="1100px 28px"/>
         <SmoothList id="assetList" anchor="bottomLeft" position="0px 150px" size="450px 520px" visible="true">
             <ListItem profile="samRow" name="default" onClick="onSelectAsset" height="48px">
@@ -17,9 +17,9 @@
             </ListItem>
         </SmoothList>
         <GuiElement anchor="bottomLeft" position="480px 635px" size="1100px 28px">
-            <Text profile="samColumn" text="Product / type" position="0px 0px" size="430px 28px"/>
-            <Text profile="samColumn" text="Current" position="440px 0px" size="240px 28px"/>
-            <Text profile="samColumn" text="Alert threshold" position="710px 0px" size="360px 28px"/>
+            <Text profile="samColumn" id="label_productType" text="" position="0px 0px" size="430px 28px"/>
+            <Text profile="samColumn" id="label_current" text="" position="440px 0px" size="240px 28px"/>
+            <Text profile="samColumn" id="label_threshold" text="" position="710px 0px" size="360px 28px"/>
         </GuiElement>
         <SmoothList id="productList" anchor="bottomLeft" position="480px 150px" size="1100px 480px" visible="true">
             <ListItem profile="samRow" name="default" onClick="onSelectProduct" height="48px">
@@ -32,20 +32,20 @@
             </ListItem>
         </SmoothList>
         <Text profile="samSmall" id="hint" text="" position="12px 115px" size="1570px 28px"/>
-        <Text profile="samAlertHeading" text="Alert Type" position="480px 110px" size="560px 22px"/>
+        <Text profile="samAlertHeading" id="label_alertType" text="" position="480px 110px" size="560px 22px"/>
         <Bitmap profile="samDivider" position="480px 106px" size="560px 2px" id="alertDivider"/>
-        <Button profile="samButton" id="lowButton" text="Low" onClick="onLow" position="480px 58px" size="180px 38px"/>
-        <Button profile="samButton" id="highButton" text="High" onClick="onHigh" position="670px 58px" size="180px 38px"/>
-        <Button profile="samButton" id="offButton" text="Off" onClick="onOff" position="860px 58px" size="180px 38px"/>
+        <Button profile="samButton" id="lowButton" text="" onClick="onLow" position="480px 58px" size="180px 38px"/>
+        <Button profile="samButton" id="highButton" text="" onClick="onHigh" position="670px 58px" size="180px 38px"/>
+        <Button profile="samButton" id="offButton" text="" onClick="onOff" position="860px 58px" size="180px 38px"/>
         <Button profile="samButton" id="minusFive" text="-5%" onClick="onMinusFive" position="1050px 58px" size="120px 38px"/>
         <Button profile="samButton" id="minus" text="-1%" onClick="onMinus" position="1180px 58px" size="120px 38px"/>
         <Button profile="samButton" id="plus" text="+1%" onClick="onPlus" position="1310px 58px" size="120px 38px"/>
         <Button profile="samButton" id="plusFive" text="+5%" onClick="onPlusFive" position="1440px 58px" size="120px 38px"/>
-        <Button profile="samButton" id="hudButton" text="HUD: On" onClick="onHud" position="12px 0px" size="180px 38px"/>
-        <Button profile="samButton" id="moveButton" text="Move HUD" onClick="onMove" position="202px 0px" size="180px 38px"/>
-        <Button profile="samButton" id="resetButton" text="Reset position" onClick="onResetHud" position="392px 0px" size="180px 38px"/>
+        <Button profile="samButton" id="hudButton" text="" onClick="onHud" position="12px 0px" size="180px 38px"/>
+        <Button profile="samButton" id="moveButton" text="" onClick="onMove" position="202px 0px" size="180px 38px"/>
+        <Button profile="samButton" id="resetButton" text="" onClick="onResetHud" position="392px 0px" size="180px 38px"/>
         <Button profile="samButton" id="rowsButton" text="+" onClick="onRows" position="582px 0px" size="44px 38px"/>
         <Button profile="samButton" id="rowsLessButton" text="-" onClick="onRowsLess" position="816px 0px" size="44px 38px"/>
-        <Text profile="samRowsReadout" id="rowsReadout" text="HUD Rows: 10" position="636px 0px" size="170px 38px"/>
+        <Text profile="samRowsReadout" id="rowsReadout" text="" position="636px 0px" size="170px 38px"/>
     </GuiElement>
 </GUI>

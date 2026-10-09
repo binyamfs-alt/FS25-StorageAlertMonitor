@@ -1,5 +1,41 @@
 StorageAlertMonitor = { modDir = g_currentModDirectory, modName = g_currentModName }
 local M = StorageAlertMonitor
+function M:tr(key, ...)
+    local value = g_i18n:getText("sam_" .. key, self.modName)
+    if select("#", ...) > 0 then
+        return string.format(value, ...)
+    end
+    return value
+end
+
+local labelKeys = {
+    ["Storage"] = "storage",
+    ["Input / output"] = "inputOutput",
+    ["Input"] = "input",
+    ["Output"] = "output",
+    ["Productivity"] = "productivity",
+    ["Animal production"] = "animalProduction",
+    ["Feed (shared)"] = "feedShared",
+    ["Total Capacity (effectiveness)"] = "totalEffectiveness",
+    ["Feed effectiveness"] = "feedEffectiveness",
+    ["Food"] = "food",
+    ["Shared feed pool"] = "sharedFeedPool",
+    ["Output buffer"] = "outputBuffer",
+    ["Robot bunker"] = "robotBunker",
+    ["Animals"] = "animals",
+    ["Occupancy"] = "occupancy",
+    ["Production"] = "production",
+    ["Husbandry"] = "husbandry",
+    ["Pallet storage"] = "palletStorage",
+    ["Pallet / bale slots"] = "slots",
+    ["Shared occupancy"] = "sharedOccupancy",
+    ["Stored product"] = "storedProduct",
+}
+function M:label(value)
+    local key = labelKeys[value]
+    return key and self:tr(key) or value
+end
+
 source(M.modDir .. "Data.lua")
 source(M.modDir .. "gui/MonitorPage.lua")
 
@@ -308,12 +344,12 @@ function M:draw()
         x + 0.006,
         y + h - 0.012,
         0.010,
-        "Storage Alerts" .. (pages > 1 and " " .. self.pageNumber .. "/" .. pages or "")
+        self:tr("hudTitle") .. (pages > 1 and " " .. self.pageNumber .. "/" .. pages or "")
     )
     setTextBold(false)
     if count == 0 then
         setTextColor(0.8, 0.8, 0.8, 1)
-        renderText(x + 0.006, y + 0.018, 0.011, "Drag title bar to move")
+        renderText(x + 0.006, y + 0.018, 0.011, self:fit(self:tr("dragHint"), 0.011, w - 0.012))
     end
     for i = 1, count do
         local row = self.alerts[(self.pageNumber - 1) * self.maxRows + i]

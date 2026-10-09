@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <modDesc descVersion="113">
     <author>BinyamFS</author>
-    <version>1.0.1.2</version>
+    <version>1.0.1.3</version>
     <title>
         <en>Storage Alert Monitor</en>
+        <de>Lagerwarnungsmonitor</de>
     </title>
     <description>
         <en><![CDATA[Monitor selected products in productions, storages and husbandries with individual low or high percentage alerts. The movable HUD displays product icons, localized names, building names and current percentages. Independent of Distribution Redux.
 
 Default mouse / HUD move control: Left Ctrl+Left Alt+S. Press to enable the cursor and HUD move mode, drag the title bar, then press again or click outside the HUD to finish. Restores the previous cursor state. Works on foot and in vehicles; reassign it in Controls under Storage Alerts: Toggle mouse / move HUD.
+
+Changelog 1.0.1.3:
+- Add complete German menu, HUD and control translations.
 
 Changelog 1.0.1.2:
 - Suspend mouse camera movement while the cursor is visible, on foot and in vehicles.
@@ -26,6 +30,9 @@ Changelog 1.0.0.14:
         <de><![CDATA[Überwache ausgewählte Produkte in Produktionen, Lagern und Tierställen mit individuellen Warnungen für niedrige oder hohe Füllstände. Das verschiebbare HUD zeigt Produktsymbole, lokalisierte Namen, Gebäudenamen und aktuelle Prozentwerte. Unabhängig von Distribution Redux.
 
 Standard-Maussteuerung / HUD-Verschiebung: Linke Strg+Linke Alt+S. Zum Aktivieren des Mauszeigers und Verschiebemodus drücken, die Titelleiste ziehen und erneut drücken oder außerhalb des HUD klicken, um den Modus zu beenden. Der vorherige Mauszeigerzustand wird wiederhergestellt. Zu Fuß und in Fahrzeugen verfügbar; in der Spielsteuerung unter Lagerwarnungen: Maus / HUD verschieben neu belegbar.
+
+Änderungen 1.0.1.3:
+- Deutsche Übersetzungen für Menü, HUD und Steuerung vervollständigt.
 
 Änderungen 1.0.1.2:
 - Maus-Kamerabewegung bei sichtbarem Mauszeiger zu Fuß und in Fahrzeugen unterbrechen.
@@ -49,12 +56,199 @@ Standard-Maussteuerung / HUD-Verschiebung: Linke Strg+Linke Alt+S. Zum Aktiviere
         </text>
         <text name="input_SAM_TOGGLE_HUD">
             <en>Storage Alerts: Toggle HUD</en>
+            <de>Lagerwarnungen: HUD ein-/ausblenden</de>
         </text>
         <text name="input_SAM_MORE_ROWS">
             <en>Storage Alerts: More HUD rows</en>
+            <de>Lagerwarnungen: Mehr HUD-Zeilen</de>
         </text>
         <text name="input_SAM_FEWER_ROWS">
             <en>Storage Alerts: Fewer HUD rows</en>
+            <de>Lagerwarnungen: Weniger HUD-Zeilen</de>
+        </text>
+        <text name="sam_pageTitle">
+            <en>Storage Alert Monitor</en>
+            <de>Lagerwarnungsmonitor</de>
+        </text>
+        <text name="sam_buildings">
+            <en>Buildings</en>
+            <de>Gebäude</de>
+        </text>
+        <text name="sam_productType">
+            <en>Product / type</en>
+            <de>Produkt / Typ</de>
+        </text>
+        <text name="sam_current">
+            <en>Current</en>
+            <de>Aktuell</de>
+        </text>
+        <text name="sam_threshold">
+            <en>Alert threshold</en>
+            <de>Warnschwelle</de>
+        </text>
+        <text name="sam_alertType">
+            <en>Alert Type</en>
+            <de>Warnungsart</de>
+        </text>
+        <text name="sam_low">
+            <en>Low</en>
+            <de>Niedrig</de>
+        </text>
+        <text name="sam_high">
+            <en>High</en>
+            <de>Hoch</de>
+        </text>
+        <text name="sam_off">
+            <en>Off</en>
+            <de>Aus</de>
+        </text>
+        <text name="sam_hudOn">
+            <en>HUD: On</en>
+            <de>HUD: An</de>
+        </text>
+        <text name="sam_hudOff">
+            <en>HUD: Off</en>
+            <de>HUD: Aus</de>
+        </text>
+        <text name="sam_moveHud">
+            <en>Move HUD</en>
+            <de>HUD verschieben</de>
+        </text>
+        <text name="sam_resetPosition">
+            <en>Reset position</en>
+            <de>Position zurücksetzen</de>
+        </text>
+        <text name="sam_hudRows">
+            <en>HUD Rows: %d</en>
+            <de>HUD-Zeilen: %d</de>
+        </text>
+        <text name="sam_hudTitle">
+            <en>Storage Alerts</en>
+            <de>Lagerwarnungen</de>
+        </text>
+        <text name="sam_dragHint">
+            <en>Drag title bar to move</en>
+            <de>Zum Verschieben Titelleiste ziehen</de>
+        </text>
+        <text name="sam_noBuildings">
+            <en>No owned storage buildings found</en>
+            <de>Keine eigenen Lagergebäude gefunden</de>
+        </text>
+        <text name="sam_unavailable">
+            <en>Unavailable</en>
+            <de>Nicht verfügbar</de>
+        </text>
+        <text name="sam_atBelow">
+            <en>At or below %s%%</en>
+            <de>Bei oder unter %s%%</de>
+        </text>
+        <text name="sam_atAbove">
+            <en>At or above %s%%</en>
+            <de>Bei oder über %s%%</de>
+        </text>
+        <text name="sam_monitorOff">
+            <en>monitoring off</en>
+            <de>Überwachung aus</de>
+        </text>
+        <text name="sam_capacityUnknown">
+            <en> | Capacity unknown: percentage alerts unavailable.</en>
+            <de> | Kapazität unbekannt: Prozentwarnungen nicht verfügbar.</de>
+        </text>
+        <text name="sam_selectHint">
+            <en>Select a building, then a product. Set Low or High and adjust its threshold.</en>
+            <de>Gebäude und Produkt wählen. Niedrig oder Hoch wählen und Warnschwelle einstellen.</de>
+        </text>
+        <text name="sam_storage">
+            <en>Storage</en>
+            <de>Lager</de>
+        </text>
+        <text name="sam_inputOutput">
+            <en>Input / output</en>
+            <de>Eingang / Ausgang</de>
+        </text>
+        <text name="sam_input">
+            <en>Input</en>
+            <de>Eingang</de>
+        </text>
+        <text name="sam_output">
+            <en>Output</en>
+            <de>Ausgang</de>
+        </text>
+        <text name="sam_productivity">
+            <en>Productivity</en>
+            <de>Produktivität</de>
+        </text>
+        <text name="sam_animalProduction">
+            <en>Animal production</en>
+            <de>Tierproduktion</de>
+        </text>
+        <text name="sam_feedShared">
+            <en>Feed (shared)</en>
+            <de>Futter (gemeinsam)</de>
+        </text>
+        <text name="sam_totalEffectiveness">
+            <en>Total Capacity (effectiveness)</en>
+            <de>Gesamtkapazität (Futtereffektivität)</de>
+        </text>
+        <text name="sam_feedEffectiveness">
+            <en>Feed effectiveness</en>
+            <de>Futtereffektivität</de>
+        </text>
+        <text name="sam_food">
+            <en>Food</en>
+            <de>Futter</de>
+        </text>
+        <text name="sam_sharedFeedPool">
+            <en>Shared feed pool</en>
+            <de>Gemeinsamer Futtervorrat</de>
+        </text>
+        <text name="sam_outputBuffer">
+            <en>Output buffer</en>
+            <de>Ausgangspuffer</de>
+        </text>
+        <text name="sam_robotBunker">
+            <en>Robot bunker</en>
+            <de>Fütterungsroboter-Bunker</de>
+        </text>
+        <text name="sam_animals">
+            <en>Animals</en>
+            <de>Tiere</de>
+        </text>
+        <text name="sam_occupancy">
+            <en>Occupancy</en>
+            <de>Belegung</de>
+        </text>
+        <text name="sam_production">
+            <en>Production</en>
+            <de>Produktion</de>
+        </text>
+        <text name="sam_husbandry">
+            <en>Husbandry</en>
+            <de>Tierhaltung</de>
+        </text>
+        <text name="sam_palletStorage">
+            <en>Pallet storage</en>
+            <de>Palettenlager</de>
+        </text>
+        <text name="sam_slots">
+            <en>Pallet / bale slots</en>
+            <de>Paletten- / Ballenplätze</de>
+        </text>
+        <text name="sam_sharedOccupancy">
+            <en>Shared occupancy</en>
+            <de>Gemeinsame Belegung</de>
+        </text>
+        <text name="sam_storedProduct">
+            <en>Stored product</en>
+            <de>Gelagertes Produkt</de>
+        </text>
+        <text name="sam_metricProductivity">
+            <en>productivity</en>
+            <de>Produktivität</de>
+        </text>
+        <text name="sam_metricFeed">
+            <en>feed effectiveness</en>
+            <de>Futtereffektivität</de>
         </text>
     </l10n>
     <actions>

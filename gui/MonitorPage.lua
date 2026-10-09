@@ -15,6 +15,19 @@ function SAMPage:text(id, value)
 end
 function SAMPage:onGuiSetupFinished()
     SAMPage:superClass().onGuiSetupFinished(self)
+    local m = StorageAlertMonitor
+    self:text("label_pageTitle", m:tr("pageTitle"))
+    self:text("label_buildings", m:tr("buildings"))
+    self:text("label_productType", m:tr("productType"))
+    self:text("label_current", m:tr("current"))
+    self:text("label_threshold", m:tr("threshold"))
+    self:text("label_alertType", m:tr("alertType"))
+    self:text("lowButton", m:tr("low"))
+    self:text("highButton", m:tr("high"))
+    self:text("offButton", m:tr("off"))
+    self:text("hudButton", m:tr("hudOn"))
+    self:text("moveButton", m:tr("moveHud"))
+    self:text("resetButton", m:tr("resetPosition"))
     -- Reuse the sidebar artwork in the standard menu header badge slot.
     local headerIcon = self:getDescendantById("monitorHeaderIcon")
     if headerIcon then
@@ -75,11 +88,11 @@ function SAMPage:refresh(catalog)
     self.rows = selected and m:products(selected) or {}
     self:text(
         "buildingTitle",
-        selected and selected.name .. " (" .. selected.role .. ")" or "No owned storage buildings found"
+        selected and selected.name .. " (" .. m:label(selected.role) .. ")" or m:tr("noBuildings")
     )
     self.productList:reloadData()
-    self:text("hudButton", m.hudEnabled and "HUD: On" or "HUD: Off")
-    self:text("rowsReadout", "HUD Rows: " .. m.maxRows)
+    self:text("hudButton", m:tr(m.hudEnabled and "hudOn" or "hudOff"))
+    self:text("rowsReadout", m:tr("hudRows", m.maxRows))
     self:selectionHint()
     self:styleButtons()
 end
@@ -100,7 +113,7 @@ function SAMPage:populateCellForItemInSection(list, section, index, item)
     if list == self.assetList then
         local a = m.assets[index]
         text("name", a.name)
-        text("role", a.role)
+        text("role", m:label(a.role))
     else
         local r = self.rows[index]
         local rule = m.rules[r.key]
@@ -110,17 +123,17 @@ function SAMPage:populateCellForItemInSection(list, section, index, item)
         text(
             "amount",
             r.unit == "percent"
-                    and (r.pct and string.format("%.1f%% %s", r.pct, r.metric or "productivity") or "Unavailable")
+                    and (r.pct and string.format("%.1f%% %s", r.pct, r.metric or m:tr("metricProductivity")) or m:tr("unavailable"))
                 or r.held and string.format(
                     "%.0f / %s",
                     r.held,
                     r.capacity and string.format("%.0f", r.capacity) or "?"
                 )
-                or "Unavailable"
+                or m:tr("unavailable")
         )
         text(
             "rule",
-            rule and (rule.mode == "low" and "At or below " or "At or above ") .. rule.threshold .. "%" or "Off"
+            rule and m:tr(rule.mode == "low" and "atBelow" or "atAbove", rule.threshold) or m:tr("off")
         )
         local e = item:getAttribute("icon")
         if e then
@@ -151,13 +164,14 @@ function SAMPage:getSelectedProduct()
     end
 end
 function SAMPage:selectionHint()
+    local m = StorageAlertMonitor
     local r = self:getSelectedProduct()
     local rule = r and StorageAlertMonitor.rules[r.key]
     self:text(
         "hint",
         r
-                and (r.title .. ": " .. (rule and ((rule.mode == "low" and "at or below " or "at or above ") .. rule.threshold .. "%") or "monitoring off") .. (not r.capacity and " | Capacity unknown: percentage alerts unavailable." or ""))
-            or "Select a building, then a product. Set Low or High and adjust its threshold."
+                and (r.title .. ": " .. (rule and m:tr(rule.mode == "low" and "atBelow" or "atAbove", rule.threshold) or m:tr("monitorOff")) .. (not r.capacity and m:tr("capacityUnknown") or ""))
+            or m:tr("selectHint")
     )
 end
 function SAMPage:mode(mode)

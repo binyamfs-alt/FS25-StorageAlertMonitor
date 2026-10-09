@@ -68,9 +68,9 @@ function D.row(asset, id, ft, title, direction, read)
         asset = asset,
         key = asset.key .. "|" .. id,
         ft = ft,
-        title = title or desc and desc.title or id,
+        title = title and StorageAlertMonitor:label(title) or desc and desc.title or id,
         icon = desc and desc.hudOverlayFilename,
-        direction = direction or "Storage",
+        direction = StorageAlertMonitor:label(direction or "Storage"),
         read = read,
     }
     local held, cap = read()
@@ -193,7 +193,7 @@ function D.husbandryRows(asset, rows)
             end
         )
         quality.unit = "percent"
-        quality.metric = "feed effectiveness"
+        quality.metric = StorageAlertMonitor:tr("metricFeed")
         quality.icon = StorageAlertMonitor and StorageAlertMonitor.modDir .. "icon_StorageAlertMonitor.dds"
         rows[#rows + 1] = quality
         rows[#rows + 1] = D.row(asset, "food:total", nil, "Food", "Shared feed pool", function()
@@ -290,7 +290,7 @@ function D.enumerate(farm)
         if owner == farm and farm > 0 then
             local uid = D.uid(p)
             if uid then
-                local name = D.call(p, "getName") or p.name or "Storage"
+                local name = D.call(p, "getName") or p.name or StorageAlertMonitor:tr("storage")
                 local function add(role, extra)
                     local a = { placeable = p, role = role, name = name, key = uid .. "|" .. role }
                     if extra then
